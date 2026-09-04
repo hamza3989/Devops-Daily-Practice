@@ -9,3 +9,4 @@ if [ "$HTTP_CODE" -eq 200 ]; then
 else
     echo "{\"time\": \"$TIME\", \"target\": \"$TARGET\", \"status\": \"ERROR\", \"message\": \"Network DOWN\"}" >> /home/devops/Downloads/network-monitor/app.json.log
 fi
+# Upgraded by Hamza
