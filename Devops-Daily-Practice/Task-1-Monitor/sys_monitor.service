@@ -1,0 +1,12 @@
+[Unit]
+Description=System Resource Monitor
+After=network.target
+
+[Service]
+ExecStart=/home/devops/Devops-Daily-Practice/Task-1-Monitor/sys_monitor.sh
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target
+
