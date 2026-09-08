@@ -1,4 +1,3 @@
-cat << 'EOF' > sys_monitor.sh
 #!/bin/bash
 
 LOG_FILE="/var/log/sys_monitor.log"
@@ -12,8 +11,8 @@ while true; do
 
     TIME= $(date +"%Y-%m-%d %H:%M:%S")
 
-    if [ "$DISK" -ge 90 ] || { "$RAM" -ge 90 ]; then
-        echo "$TIME [CRITICAL] System in Danger! Disk: $DISK% RAM: $RAM% >> $LOG_FILE
+    if [ "$DISK" -ge 90 ] || [ "$RAM" -ge 90 ]; then
+        echo "$TIME [CRITICAL] System in Danger! Disk: $DISK%, RAM: $RAM%" >> $LOG_FILE
     elif [ "DISK" -ge 80 ] || [ "RAM" -ge 80 ]; then
         echo "$TIME [WARNING] High Load! Disk; $DISK%, RAM:$RAM%" >> $LOG_FILE
     else
@@ -22,4 +21,4 @@ while true; do
 
     sleep 60
 done
-eof
+EOF

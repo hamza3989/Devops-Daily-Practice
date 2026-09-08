@@ -3,7 +3,7 @@ Description=System Resource Monitor
 After=network.target
 
 [Service]
-ExecStart=/home/devops/Devops-Daily-Practice/Task-1-Monitor/sys_monitor.sh
+ExecStart=/home/devops/Downloads/Devops-Daily-Practice/Task-1-Monitor/sys_monitor.sh
 Restart=always
 User=root
 
